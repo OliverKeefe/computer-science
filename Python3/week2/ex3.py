@@ -20,7 +20,7 @@
 # int : A function that parses a user input from a String into an Int
 # input : a function that gets user input and converts to a string value
 
-def mathfunc(input):
+def math_func(input):
     output = number 
     output += 3
     output *= 2
@@ -31,7 +31,7 @@ def mathfunc(input):
 
 def main():
     number = int(input("Enter your number: "))
-    print (mathfunc(number))
+    print (math_func(number))
     
 if __name__ == "__main__":
     main()
