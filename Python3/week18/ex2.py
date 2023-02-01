@@ -16,12 +16,6 @@ def main_menu():
 def create_dict(name, number):
     return {name: number}
 
-def search_key(dictionary, query):
-    return [key for key, query in dictionary.items() if query == key]
-
-def search_value(dictionary, value):
-    return [key for key, val in dictionary.items() if val == value]
-
 def main():
     telephone_directory = {}
     header = "Name      " + "   Telephone Number"
