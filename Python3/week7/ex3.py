@@ -1,27 +1,16 @@
 import string
 
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
-
+def is_palindrome(phrase):
+    phrase = phrase.lower().translate(str.maketrans("", "", string.punctuation))
+    return phrase == phrase[::-1] # Fixed, abstracted whole thing to a function, original was convoluted.
+ 
 def main():
-    original_string = input("Enter a word or phrase: ")
-    print(original_string)
-    lowercase_string = original_string.lower()
-    print(lowercase_string)
-    for i in lowercase_string:
-        if i in punc:
-            new_string = lowercase_string.replace(i, "")
-        else:
-            new_string = lowercase_string
-    print(new_string)
-    reverse_string = new_string[::-1]
-    print(reverse_string)
+    user_input = input("Enter a string to ascertain whether it's a palindrome: ")
 
-    if reverse_string != new_string:
-        print("This word / phrase is not a palindrome.")
-    else:
-        print("This word / phrase is a palindrome!")
+    if is_palindrome(user_input) == True:
+        print(user_input, "is a palindrome.")
+    else: 
+        print(user_input, "is not palindrome.")
 
 if __name__ == "__main__":
     main()
-
-    #Fixed! Yay! 

@@ -3,9 +3,10 @@
 list1 = ["roll", "burger", "cheese", "ketchup", "mustard"] 
 list2 = [] 
 list3 = [] 
+
 #code to add ten numbers to list2 
 a = 0 
-print("Task 1:", *list1, sep = "\n ")
+print("Task 1:", *list1, sep = "\n")
 while a < 10: 
     a = a + 1 
     userdata = input("Enter a whole number: ") 
@@ -13,15 +14,12 @@ while a < 10:
         usernum = int(userdata) 
         list2.append(usernum) 
     print(list2)
-list3.append(list2)
-list3 = list2.insert(list2, list3) 
-print(list3)
+    list3 = list2
+    print(list3)
 
-remove_item = int(input("Enter the value you wish to remove from list3: "))
-if remove_item in list3([0]):
-    list3.remove(remove_item)
-else:
-    print("[!] value could not be found...")  
+odd_numbers = [x for x in list3 if x % 2 == 0]
+even_numbers = [x for x in list2 if x % 2 != 0]
+print("List2 with even numbers removed:", even_numbers, "List3 with odd numbers removed:", odd_numbers)
 
 list2_length = len(list2)
 list3_length = len(list3)
