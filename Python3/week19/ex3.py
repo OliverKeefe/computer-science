@@ -20,6 +20,25 @@ Hint: you might need to adjust the savedata() function to make the loaddata() fu
 easier to write; just remember that any changes you make to one function will likely affect the
 other."""
 
+# def read_file(filename):
+#     with open(filename, 'r') as file:
+#         contents = file.read
+# 
+#         return contents
+
+def save_data(dictionary, file_path):
+    with open(file_path, 'w') as file:
+        for key, value in dictionary.items():
+            file.write(f"{key}:{value}\n")
+
+def load_data(file_path):
+    loaded_dict = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            key, value = line.strip().split(':')
+            loaded_dict[key] = value
+    return loaded_dict
+
 def main_menu():
     menu_ui = [
         "\nTelephone Directory\n",
@@ -29,6 +48,8 @@ def main_menu():
         "[2] Display all contacts",
         "[3] Search",
         "[4] Delete a contact",
+        "[5] Save data",
+        "[6] Load data",
         "[Q] Quit"
     ]
 
@@ -76,9 +97,20 @@ def main():
         elif choice == '4':
             print("You have selected: Option [4] Delete a contact...")
             delete = input("Which contact would you like to remove? $: ")
+
             if delete in telephone_directory:
                 telephone_directory.pop(delete, None)
                 print(delete, "has been deleted.")
+
+        elif choice == '5':
+            print("You have selected: Option [5] Save data...")
+            save_file = "save_data.txt" #input("Enter the path in which you wish to save your data $: ")
+            save_data(telephone_directory, save_file)
+            
+        elif choice == '6':
+            print("You have selected: Option [6] Load data...")
+            telephone_directory = load_data("save_data.txt")
+        
         elif choice == 'q' or choice == 'Q':
             print("You have selected: Option [Q] Exiting...")
             exit()
