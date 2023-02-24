@@ -14,7 +14,7 @@ def vowel_or_no_vowel(char):
     return is_vowel
 
 def main():
-    input_char = input("Input a single character: ")
+    input_char = input("Input a character to test if it's a vowel: ")
     if len(input_char) > 1:
         len_char = len(input_char) - 1
         input_char = input_char[:len(input_char)-len_char] 

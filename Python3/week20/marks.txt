@@ -1,0 +1,14 @@
+Student Marks
+Jean Paul Alarie 56
+Juan Manuel Bienvenida 72.6 12
+Janet Brimfield 66.3 71
+Helen Jane Burnett 54
+Bernard Galpin 45 66.2 32
+Alexander Adam Janssen 41 21
+Struan Kilgour 79 82.5 45.5
+Pierre Antoine Lajoie 56.2 45.5
+Hamish McDonald 66.5 91
+Shakeel Mirza 12
+Sidney Rickard 88 78 84.4
+Sharlene Urry 54.5
+Karl James Richard White 62 59.5 41.2 66

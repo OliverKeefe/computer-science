@@ -4,10 +4,13 @@
 # passing this number as an argument, and finally the value returned by the function should 
 # then be printed back to the user. 
 
-def func(int):
+def square(int):
     square = int ** 2
-
     return square
 
-user_input = int(input("Enter a whole number: "))
-print(func(user_input))
+def main():
+    user_input = int(input("Enter a whole number: "))
+    print(square(user_input))
+
+if __name__ == "__main__":
+    main()

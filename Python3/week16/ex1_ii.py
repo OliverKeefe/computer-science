@@ -4,12 +4,12 @@
 def main():
     n = int(input("Input number to multiply: "))
     ii = 1
-    nn = n * 12
+    nn = n * 13
 
-    for i in range(1, 12): 
+    for i in range(1, 13): 
        print(n, "x", i, "=", i*n)
     
-    while ii < 12:
+    while ii < 13:
         print(n, "x", ii, "=", ii*n)
         ii += 1
         

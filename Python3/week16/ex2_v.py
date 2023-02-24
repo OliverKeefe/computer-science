@@ -2,10 +2,10 @@
 # length of the string. You should NOT use the built-in Python len() function for this task. 
 # Write a simple program to test the function
 
-def string_length(str):
+def string_length(string):
     length = 0
 
-    for i in str:
+    for i in string:
         length += 1
     
     return length

@@ -6,17 +6,18 @@
 # find_longest_word() function
 
 def find_longest_word(string):
-    string_to_list = list(string.split())
-    result = max(string_to_list, key=len)
+    string_to_list = string.split()
+    longest_word = max(string_to_list, key=len)
     
-    return result
+    if all(len(word) == len(longest_word) for word in string_to_list):
+        return "All strings are the same length"
+    else:
+        return str("The longest word is: " + longest_word)
     
 def main():
     user_string = input("Enter a sentence: ")
-    
     try:
-        print("The longest word is:", find_longest_word(user_string))
-        
+        print(find_longest_word(user_string))
     except ValueError:
         print("[!] Invalid input.")
         user_string = input("Enter a string: ")

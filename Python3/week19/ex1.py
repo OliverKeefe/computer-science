@@ -31,7 +31,7 @@ def insert(filename, arg, text):
 
 def read_file(filename):
     with open(filename, 'r') as file:
-        contents = file.read
+        contents = file.read()
         return contents
 
 def output_file_contents(filename):

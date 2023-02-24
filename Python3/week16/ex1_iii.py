@@ -3,27 +3,26 @@
 
 def main():
     n = int(input("Input number to multiply: "))
-    ii = 1
-    nn = n * int(input("Enter how many times you wish to multiply it: "))
-
-    while not n.isinstance(n, int):
+    x = int(input("Enter how many times you wish to multiply it: "))
+    while not isinstance(n, int):
         try:
-            int(n)
+            n = int(n)
         except ValueError:
             print("Invalid, your input must be an integer.")
             n = int(input("Input number to multiply: "))
 
-    while not nn.isinstance(nn, int):
+    while not isinstance(x, int):
         try:
-            int(nn)
+            x = int(x)
         except ValueError:
             print("Invalid, your input must be an integer.")
-            nn = n * int(input("Enter how many times you wish to multiply it: "))
+            x = int(input("Enter how many times you wish to multiply it: "))
 
-    for i in range(1, 12): 
+    for i in range(1, x+1): 
        print(n, "x", i, "=", i*n)
     
-    while ii < 12:
+    ii = 1
+    while ii <= x:
         print(n, "x", ii, "=", ii*n)
         ii += 1
         
