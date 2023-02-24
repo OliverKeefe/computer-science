@@ -103,13 +103,21 @@ def main():
                 print(delete, "has been deleted.")
 
         elif choice == '5':
-            print("You have selected: Option [5] Save data...")
-            save_file = "save_data.txt" #input("Enter the path in which you wish to save your data $: ")
-            save_data(telephone_directory, save_file)
+            save_file = input("Enter the path in which you wish to save your data $: ")
+            try:
+                telephone_directory = load_data(save_file)
+            except ValueError:
+                print("[!] Inavlid file path.")
+                save_file = input("Enter the path to your data file $: ")
             
         elif choice == '6':
             print("You have selected: Option [6] Load data...")
-            telephone_directory = load_data("save_data.txt")
+            save_file = input("Enter the path in which you wish to save your data $: ")
+            try:
+                telephone_directory = load_data(save_file)
+            except ValueError:
+                print("[!] Inavlid file path.")
+                save_file = input("Enter the path to your data file $: ")
         
         elif choice == 'q' or choice == 'Q':
             print("You have selected: Option [Q] Exiting...")
